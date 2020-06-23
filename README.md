@@ -121,6 +121,13 @@ This would be invalid because GraphQL cannot resolve two identically named queri
 ( )Arguments
 (X)Aliases
 
+?: What major problems do aliases handle?
+
+( )Aliases reduce overfetching.
+( )Aliases reduce underfetching.
+(X)Aliases allow us to call the same query with different variables in a single GraphQL request.
+( )Aliases are special type of custom scalars which name fields differently based on received data.
+
 ?: In GraphQL type definitions, each field can take zero or more arguments.
 
 (X)True
