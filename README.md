@@ -32,12 +32,104 @@
 ( )When we use the special library called "unfetch".
 ( )An optimization technique for GraphQL mutations.
 
+?: Is GraphQL only for React developers?
+
+( )Yes
+(X)No
+
 ?: What does a `!` indicate in GraphQL's SDL?
 
 ( )A value will be updated
 ( )A value is optional
 ( )A value can be deleted
 (X)A value is required
+
+?: Select all the Scalar types native to GraphQL:
+
+[X]ID
+[X]Float
+[ ]Date
+[X]Boolean
+[X]String
+[ ]Post
+
+?: What GraphQL feature improves the structure and reusability of your code?
+
+( )Aliases
+(X)Fragments
+( )Refactoring
+( )Queries
+
+?: Given this schema:
+
+```graphql
+type Animal {
+  id: ID!
+  age: Float
+  alive: Boolean
+  breed: String
+  zoo: Zoo
+}
+type Location {
+  id: ID!
+  address: String!
+  city: String!
+  state: String!
+  zoos: [Zoo]!
+}
+type Zoo {
+  id: ID!
+  animals: [Animal]
+  location: Location!
+  name: String
+}
+```
+
+Select all that are true:
+
+[X]Zoos have many animals
+[ ]Location's address field is a Scalar type
+[X]A zoo belongs to a Location
+[X]Animal's age field is not required
+
+?: Given the schema above, select the fields below that are required:
+
+[ ]Zoo name
+[X]Zoo location
+[X]Location ID
+[ ]Animal age
+[X]Location state
+
+?: Let's say we want to query for 2 specific Animals, like so:
+
+```graphql
+{
+  Animal(id: 8) {
+    age
+    breed
+  }
+  Animal(id: 14) {
+    age
+    breed
+  }
+}
+```
+
+This would be invalid because GraphQL cannot resolve two identically named queries. What feature could we use to solve this issue?
+
+( )Fragments
+( )Arguments
+(X)Aliases
+
+?: In GraphQL type definitions, each field can take zero or more arguments.
+
+(X)True
+( )False
+
+?: In GraphQL, there is no such concept of default arguments.
+
+( )True
+(X)False
 
 ?: What is a resolver function?
 
