@@ -88,7 +88,7 @@ type Zoo {
 Select all that are true:
 
 [X]Zoos have many animals
-[ ]Location's address field is a Scalar type
+[X]Location's address field is a Scalar type
 [X]A zoo belongs to a Location
 [X]Animal's age field is not required
 
